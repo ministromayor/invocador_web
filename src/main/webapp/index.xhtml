@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:a4j="http://richfaces.org/a4j">
+
+	<body>
+		<ui:composition template="/templates/template.xhtml">
+			<ui:define name="title">RichFaces Sample</ui:define>
+			<ui:define name="body">
+				<h:form prependId="false">
+
+					<h:commandButton value="Acreditaciones HITSS">
+						<a4j:actionListener listener="#{cargasMedaBean.invocarHitssAcreditaciones}"/>
+						<f:ajax render="messages"/>
+					</h:commandButton>
+
+					<h:commandButton value="Altas HITSS">
+						<a4j:actionListener listener="#{cargasMedaBean.invocarHitssAltas}"/>
+						<f:ajax render="messages"/>
+					</h:commandButton>
+
+					<h:commandButton value="Chedraui Entrada">
+						<a4j:actionListener listener="#{cargasMedaBean.invocarChedrauiEntrada}"/>
+						<f:ajax render="messages"/>
+					</h:commandButton>
+
+					<h:commandButton value="Chedraui Salida">
+						<a4j:actionListener listener="#{cargasMedaBean.invocarChedrauiSalida}"/>
+						<f:ajax render="messages"/>
+					</h:commandButton>
+
+					<h:commandButton value="IAVE">
+						<a4j:actionListener listener="#{cargasMedaBean.invocarIaveEntrada}"/>
+						<f:ajax render="messages"/>
+					</h:commandButton>
+
+					<h:commandButton value="Inbursa">
+						<a4j:actionListener listener="#{cargasMedaBean.invocarInbursaEntrada}"/>
+						<f:ajax render="messages"/>
+					</h:commandButton>
+
+					<h:commandButton value="Ostar">
+						<a4j:actionListener listener="#{cargasMedaBean.invocarOstarEntrada}"/>
+						<f:ajax render="messages"/>
+					</h:commandButton>
+
+					<h:commandButton value="Sanborns Entrada">
+						<a4j:actionListener listener="#{cargasMedaBean.invocarSanbornsEntrada}"/>
+						<f:ajax render="messages"/>
+					</h:commandButton>
+
+					<h:commandButton value="Sanborns Salida">
+						<a4j:actionListener listener="#{cargasMedaBean.invocarSanbornsSalida}"/>
+						<f:ajax render="messages"/>
+					</h:commandButton>
+
+					<h:commandButton value="Hidrosina">
+						<a4j:actionListener listener="#{cargasMedaBean.invocarHidrosinaEntrada}"/>
+						<f:ajax render="messages"/>
+					</h:commandButton>
+
+					<fieldset>
+						<legend>Mensaje</legend>
+						<h:messages id="messages"/>
+					</fieldset>
+
+				</h:form>
+			</ui:define>
+		</ui:composition>
+	</body>
+</html>
